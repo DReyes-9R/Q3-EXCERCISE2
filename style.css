@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: beige;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+h1 {
+    color: #37c8e7;
+}
+
+.circle {
+    position: relative;
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #37c8e7;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #37c8e7;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    margin: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.buttons button:hover {
+    background-color: #2a9abf;
+    transform: scale(1.05);
+}
+
+
+#output {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.c-label {
+    position: absolute;
+    top: 90%;  /* Moves "C" lower */
+    right: 4px;  /* Moves "C" slightly to the right */
+    transform: translateY(-50%);
+    font-style: italic;
+    font-size: 18px;
+    color: gray;
+}
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Area and Circumference of a Circle</h1>
+        <div class="circle">
+            <div class="dot"></div>
+            <div class="c-label">C</div>
+        </div>
+        <p>Radius: <span id="radius">3</span>in</p>
+        <p>Find out the area and circumference of the circle.</p>
+        <div class="buttons">
+            <button onclick="calculateArea()">AREA</button>
+            <button onclick="calculateCircumference()">CIRCUMFERENCE</button>
+            <button onclick="reloadPage()">RELOAD PAGE</button>
+        </div>
+        <p id="output"></p>
+    </div>
+
+    <script type="text/javascript">
+        function calculateArea() {
+        const radius = parseFloat(document.getElementById('radius').textContent);
+        const area = Math.PI * radius * radius;
+        document.getElementById('output').textContent = `Area: ${area.toFixed(2)} square inches`;
+    }
+
+        function calculateCircumference() {
+        const radius = parseFloat(document.getElementById('radius').textContent);
+        const circumference = 2 * Math.PI * radius;
+        document.getElementById('output').textContent = `Circumference: ${circumference.toFixed(2)} inches`;
+    }
+
+        function reloadPage() {
+        location.reload();
+    }
+    </script>
+</body>
+</html>
